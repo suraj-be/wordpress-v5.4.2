@@ -1,0 +1,32 @@
+- After installing WP, following files were added:
+  - .htaccess
+  - wp-config.php
+
+- Ideally, dimensions of screenshot.png should be (1200x900)px
+
+- /** For Loading JS file, I had to pass all of the arguments, it didn't worked with just 2 arguments **/
+  - wp_enqueue_script('main-university-js', get_theme_file_uri('/js/scripts-bundled.js'), NULL, 1.0, true);
+
+- /** tag-title - This displays 'Post Type Title - Site Title' **/
+  add_theme_support('title-tag');
+
+- get_the_ID() - Retrieve the ID of the current item in the WordPress Loop..
+
+- Return value is either the ID or 0(wp_get_post_parent_id(get_the_ID()))
+
+- the_title() returns the title of the current post, whereas, get_the_title() allows you to pass in an ID number and get the title of that post. You are not limited to just the current post, this is where the functions prefixed with get comes in such as get_permalink()
+
+- WP Functions Learnt Till Now:
+  - get_the_ID()
+  - wp_get_post_parent_id(id)
+  - the_title()
+  - get_the_title(id)
+  - the_permalink()
+  - get_permalink(id)
+  - wp_list_pages(array)
+  - get_pages(array)
+  - register_nav_menu('', '')
+  - wp_nav_menu(array)
+  - current-menu-item is the class applied by WP on nav-menus
+  - is_page(slug) - Determines whether the query is for an existing single page. 
+    - Example: is_page('about-us')
